@@ -14,18 +14,18 @@ app.post('/', (req, res)=>{
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
-        host: "smtp.zoho.in",
-        port: 465,
+        host: "for example smtp",
+        port: "your port no",
         secure: true, 
         auth: {
-            user: "contact@entreship.in",
-            pass: "EntreContact@18"
+            user: "username",
+            pass: "password"
         }
     })
 
     const mailOptions = {
-        from: "contact@entreship.in",
-        to: "cmdlabz@gmail.in",
+        from: "used in username",
+        to: "recevier mail",
         subject: 'Test Message from '+ req.body.name,
         text: "Username: "+req.body.name  +"\n"+ "EmailID: "+req.body.email +"\n"+ "Address: "+req.body.address +"\n"+"Contact: " +req.body.contact +"\n"+"Message: "+req.body.message
     }
